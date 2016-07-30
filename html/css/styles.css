@@ -44,3 +44,12 @@ form {
 p {
     text-align: center;
 }
+
+.g-recaptcha {
+    border: 2px solid red;
+}
+
+
+#submit-recaptcha {
+    border: 2px solid purple;
+}
