@@ -26,20 +26,8 @@
     <link rel="import" href="templates/header.html" id="header-template">
     <link rel="import" href="templates/footer.html" id="footer-template">
 
-    <script type="text/javascript">
-    var verifyCallback = function(response) {
-        //document.all.body.hide.style.display="block";
-        $('.load').css('display', 'none');
-    };
-    var onloadCallback = function(){
-        grecaptcha.render('verify', {
-        'sitekey' : '6LdGfyUTAAAAAIZDpThAR7kfAFRtoslKTeanvG7m',
-        'callback' : verifyCallback,
-        'theme' : 'dark' });
-    };
-    </script>
-
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- Load Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -59,22 +47,70 @@
 
     <p>Hi! Reach out to me if you'd like to find out more.</p>
 
-    <div id="verify"></div>
     <form action="MAILTO:maxgitt@umich.edu" method="post" enctype="text/plain">
-        Name<br><input type="text"><br><br>
-        E-mail<br><input type="text"><br><br> 
-
-        <input id="hide" type="submit" value="Submit">
-        <input type="reset" value="Reset">
-        <div class="cap">
-            <div class="g-recaptcha" data-sitekey="6LdGfyUTAAAAAIZDpThAR7kfAFRtoslKTeanvG7m"></div>
-        </div>
+        Name<br><input type="text" id="name"><br><br>
+        E-mail<br><input type="text" id="email"><br><br> 
     </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
 
-    <style>#hide{display:none;}</style>
+    <form action="" id="recaptcha-form">
+        <div class="g-recaptcha" data-sitekey="6LdGfyUTAAAAAIZDpThAR7kfAFRtoslKTeanvG7m"></div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Attach a submit handler to the form
+        $( "#recaptcha-form" ).submit(function( event ) {
+         
+          alert("form submitted");
+          // Stop form from submitting normally
+          event.preventDefault();
+         
+          // Validate fields
+          var name = document.getElementById('name');
+          var email = document.getElementById('email');
+          if (name.value && email.value) {
+            alert("Name: " + name.value);
+            alert("Email: " + email.value);
+
+            if (document.getElementById('g-recaptcha-response')) {
+                alert("Response Before")
+                response = grecaptcha.getResponse();
+                alert("Response: " + reponse);
+            }
+            else {
+                alert("Please verify you are human.");
+            }
+
+            
+
+            /* Send the data using post
+            url = "https://www.google.com/recaptcha/api/siteverify"
+            data = {
+                ""
+            }
+            var posting = $.post(url, );
+
+            // Put the results in a div
+            posting.done(function( data ) {
+            // CHECK RESPONSE DATA STATUS IS SUCCESS AND EMAIL MAX
+            });
+            */
+          }
+          else {
+            // Fields Invalid
+            alert("Please enter a valid name and email.");
+          }
+
+          /* Get some values from elements on the page:
+          var $form = $( this ),
+            term = $form.find( "input[name='s']" ).val(),
+            url = $form.attr( "action" );
+          */
+         
+          
+        });
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
