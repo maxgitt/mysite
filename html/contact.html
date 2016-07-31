@@ -48,8 +48,8 @@
     <p>Hi! Reach out to me if you'd like to find out more.</p>
 
     <form action="MAILTO:maxgitt@umich.edu" method="post" enctype="text/plain">
-        Name<br><input type="text"><br><br>
-        E-mail<br><input type="text"><br><br> 
+        Name<br><input type="text" id="name"><br><br>
+        E-mail<br><input type="text" id="email"><br><br> 
     </form>
 
     <form action="" id="recaptcha-form">
@@ -62,21 +62,53 @@
         // Attach a submit handler to the form
         $( "#recaptcha-form" ).submit(function( event ) {
          
+          alert("form submitted");
           // Stop form from submitting normally
           event.preventDefault();
          
-          // Get some values from elements on the page:
+          // Validate fields
+          var name = document.getElementById('name');
+          var email = document.getElementById('email');
+          if (name.value && email.value) {
+            alert("Name: " + name.value);
+            alert("Email: " + email.value);
+
+            if (document.getElementById('g-recaptcha-response')) {
+                alert("Response Before")
+                response = grecaptcha.getResponse();
+                alert("Response: " + reponse);
+            }
+            else {
+                alert("Please verify you are human.");
+            }
+
+            
+
+            /* Send the data using post
+            url = "https://www.google.com/recaptcha/api/siteverify"
+            data = {
+                ""
+            }
+            var posting = $.post(url, );
+
+            // Put the results in a div
+            posting.done(function( data ) {
+            // CHECK RESPONSE DATA STATUS IS SUCCESS AND EMAIL MAX
+            });
+            */
+          }
+          else {
+            // Fields Invalid
+            alert("Please enter a valid name and email.");
+          }
+
+          /* Get some values from elements on the page:
           var $form = $( this ),
             term = $form.find( "input[name='s']" ).val(),
             url = $form.attr( "action" );
+          */
          
-          // Send the data using post
-          var posting = $.post( url, { s: term } );
-         
-          // Put the results in a div
-          posting.done(function( data ) {
-            // CHECK RESPONSE DATA STATUS IS SUCCESS AND EMAIL MAX
-          });
+          
         });
     </script>
 
