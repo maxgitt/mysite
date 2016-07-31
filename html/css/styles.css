@@ -44,3 +44,8 @@ form {
 p {
     text-align: center;
 }
+
+.g-recaptcha {
+    margin: 10px;
+    display: inline-block;
+}
