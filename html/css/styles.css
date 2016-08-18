@@ -1,7 +1,8 @@
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    margin-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     font-family: 'Lato',serif;
     color: black;
+    margin-bottom: 40px;
 }
 
 footer {
@@ -10,7 +11,6 @@ footer {
     height: 25px;
     background-color: #41b5f3;
     bottom:0px; left:0px; right:0px;
-    margin: 10px 0px 0px 0px;
     padding-top: 3px;
     color: white;
     z-index: 4;
@@ -27,9 +27,9 @@ footer a:hover {
 }
 
 .pic {
-	width: 180px;
-	height: 180px;
-	margin-top: 100px;
+	width: 240px;
+	height: auto;
+	margin-top: 50px;
 }
 
 .navbar {
@@ -119,9 +119,20 @@ input {
     width: 81.5%;
 }
 
-.egg {
-    border: 1px solid red;
+.mtn_div {
+    border: 1px dashed red;
     float: right;
+}
+
+.navbar-nav li a .mtn {
+    padding: 0px;
+    text-align: center;
+}
+
+.mtn img {
+    border: 1px solid red;
+    height: 40%;
+    width: auto;
 }
 
 /*
@@ -130,6 +141,9 @@ input {
 }
 */
 
+.btn {
+    background-color: #41b5f3;
+}
 
 
 

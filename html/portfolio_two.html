@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="My Site" content="">
+    <meta name="Max Gittelman" content="">
+
+    <title>Max Gittelman</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Import Templates -->
+    <link rel="import" href="templates/header.html" id="header-template">
+    <link rel="import" href="templates/footer.html" id="footer-template">
+
+</head>
+
+<body>
+
+    <!-- Add Imports to DOM -->
+    <script>
+        // Add Header
+        var header_template = document.getElementById('header-template').import;
+        var header = header_template.getElementById('header');
+        document.body.appendChild(header.cloneNode(true));
+        // Add Footer
+        var footer_template = document.getElementById('footer-template').import;
+        var footer = footer_template.getElementById('footer');
+        document.body.appendChild(footer.cloneNode(true));
+    </script>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Portfolio
+                    <small>{2}</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>The Traveling Salesman</h3>
+                <h4>A* Search Algorithm</h4>
+                <p>The classic traveling salesman problem is an NP-hard problem that requires(?) the shortest route to connect a set of points. I used the A* search algorithm because it is an admissible heuristic. Several heuristics were explored to help efficiently determine the optimal path. For estimating the cost of the remaining (sparse graph) path, Kruskal’s algorithm was found most useful. A mininum spanning tree was created and the heuristic allowed for pruning of excessive length paths.</p>
+                <a class="btn btn-primary" href="#">Request Access<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Anonymous Authors</h3>
+                <h4>Bayesian Inference</h4>
+                <p>Given a library of articles, I was able to attribute an author to anonymous works. To ignore the bias of the article content and focus on a writer’s patterns, I used stopword frequency as a measurement. Stop word frequency was a much better predictor of authorship over term frequency.</p>
+                <a class="btn btn-primary" href="#">Request Access<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Logging Database</h3>
+                <h4>Runtime & Storage Tradeoffs</h4>
+                <p>Utilizing combinations of data structures, I built an efficient log file database. Taking into account insertions, deletions, and look-up complexities for time and memory, I determined optimal data structures for accomplishing specific interactions with the database.</p>
+                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Finite-state Machine</h3>
+                <h4>Assembly Level Programming</h4>
+                <p>A finite-state machine was implemented to carry out a computer's assembly instructions. I implemented procedure calls in an assembly language similar to ARM and designed an optimal finite-state machine. Instructions were fetched from memory, decoded and executed until the program reaches a halt.</p>
+                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Pipelined Datapath</h3>
+                <h4>Parallel Instruction Clocking Scheme</h4>
+                <p>By implementing a pipelined datapath I reduced the execution time for data processing that a single cycle and cycle multicycle data path could not. The five stage pipeline was complete with data forwarding and branch prediction, to prevent data hazards and control flow hazards. By allowing for the register files and memory writes to be present for the entire cycle, forwarding can be used to update instruction dependencies.</p>
+                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="portfolio_one.html">&laquo;</a>
+                    </li>
+                    <li>
+                        <a href="portfolio_one.html">1</a>
+                    </li>
+                    <li class="active">
+                        <a href="">2</a>
+                    </li>
+                    <li>
+                        <a href="">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

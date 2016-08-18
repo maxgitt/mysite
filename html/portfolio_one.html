@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="My Site" content="">
+    <meta name="Max Gittelman" content="">
+
+    <title>Max Gittelman</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Import Templates -->
+    <link rel="import" href="templates/header.html" id="header-template">
+    <link rel="import" href="templates/footer.html" id="footer-template">
+
+</head>
+
+<body>
+
+    <!-- Add Imports to DOM -->
+    <script>
+        // Add Header
+        var header_template = document.getElementById('header-template').import;
+        var header = header_template.getElementById('header');
+        document.body.appendChild(header.cloneNode(true));
+        // Add Footer
+        var footer_template = document.getElementById('footer-template').import;
+        var footer = footer_template.getElementById('footer');
+        document.body.appendChild(footer.cloneNode(true));
+    </script>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Portfolio
+                    <small>{1}</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="images/cnn.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Fingerprint Verification</h3>
+                <h4>CNN</h4>
+                <p>Convolutional Neural Networks recent success in image recognition lead our team to believe we could effectively implement a network for fingerprint verification. Using two images as input, we applied convolutions with max pooling and activation functions intermittently. A fully connected layer was then created and a softmax function is applied to its complex features to place </p>
+                <a class="btn btn-primary" href="#">Request Access<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Predicting Movie Ratings</h3>
+                <h4>Sentiment Analysis</h4>
+                <p>The intent of this natural language processing problem was to predict the ratings of a movie-goer based on his/her review. In order to yield the most accurate results, I explored combinations of various pre-processing techniques on a training data set. Approaches include lemmatizing, stemming, removing stopwords, observing word frequency and inverse document frequency. With the feature matrix engineered, I trained models using logistic regression, a support vector machine of a linear kernel, and a naive bayes and used the most accurate models on a test set.</p>
+                <a class="btn btn-primary" href="#">Request Access<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Mona Lisa</h3>
+                <h4>Genetic Algorithm</h4>
+                <p>Genetic Algorithms are famous for their ability to evolve a population of objects into a highly fit version of themselves. This project focused on producing images that highly resembled famous drawings. By mutating a population of images consisting of polygons and selecting for the best fit children, I was able to evolve the population to a desired target. </p>
+                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Shipping Yard</h3>
+                <h4>Nonlinear Search Planner</h4>
+                <p>Plan out a strategy for moving containers from a ship to specific locations in a shipping yard. Because a linear planner is inefficient in determining a solution for (this type of problem category), I used a nonlinear partial order planner. Initially I began with empty partial plans. I then continuously added causal links, which connect states, until a partial plan has met all conditions and is considered complete.</p>
+                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>An Unpredictable World</h3>
+                <h4>Markov Decision Process</h4>
+                <p>Direct an agent to a goal state in an unpredictable environment. Due to the environment’s indeterminateness, an optimal policy was determined for the agent via value iteration. The expected utility for each action at any given position is calculated. The action with the greatest expected utility is used as the optimal policy for that position and is used to update the policy for that position (along with value at position). Policies were are updated until convergence. Monte Carlo simulations were run to verify the model’s acceptability.</p>
+                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="portfolio_two.html">2</a>
+                    </li>
+                    <li>
+                        <a href="portfolio_two.html">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
