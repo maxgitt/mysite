@@ -1,23 +1,33 @@
+function success_callback() {
+  alert("Your email has been sent!");
+}
+
+function fail_callback() {
+  alert("Sorry, your email could not be sent!");
+}
+
 function send_email(name, email) {
+
   // Send email
   url = "/cgi-bin/htmail/maxgitt@umich.edu";
   data = {
       "email": email,
       "name": name
   };
-  var posting = $.post(url, data);
+  var posting = $.post(url, data, success_callback(), fail_callback());
   
+  /*
   // Check email was sent
   posting.done(function(){
       alert("Your email has been sent!");
   })
   posting.fail(function(){
       alert("Sorry the email could not be sent.");
-  })
+  })*/
 }
 
 function validate_server_recaptcha() {
-  alert("Function called")
+  alert("Function called");
   var status = null;
   // Get Validation
   url = "https://www.google.com/recaptcha/api/siteverify";
@@ -27,7 +37,7 @@ function validate_server_recaptcha() {
   };
   var posting = $.post(url, data);
   
-  // Check email was sent
+  // Check google verified
   posting.done(function(data){
       status = JSON.parse(data).status;
       alert('Status: ' + status);
@@ -55,7 +65,8 @@ $( "#recaptcha-form" ).submit(function( event ) {
     
     // Check recaptcha was completed
     if (document.getElementById('g-recaptcha-response').value) {
-        status = validate_server_recaptcha();
+        // status = validate_server_recaptcha();
+        status = "successful";
         // Check recaptcha was successful
         if (status == "successful") {
           send_email(name, email);
