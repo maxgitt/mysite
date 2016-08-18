@@ -13,6 +13,17 @@ footer {
     margin: 10px 0px 0px 0px;
     padding-top: 3px;
     color: white;
+    z-index: 4;
+    border-top: 1px solid black;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: gray;
 }
 
 .pic {
@@ -27,10 +38,36 @@ footer {
 
 .navbar-inverse .navbar-nav li a {
 	color: white;
+    text-align: center;
 }
 
 .navbar-inverse .navbar-brand {
-	color: white;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav li:hover {
+    background-color: blue;
+    border-radius: 4px;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+    color: yellow;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: yellow;
+    background-color: blue;
+    border-radius: 4px;
+}
+
+.about {
+    width: 70%;
+    margin: auto;
+    max-width: 700px;
+}
+
+.contact {
+    text-align: center;
 }
 
 form {
@@ -41,14 +78,41 @@ form {
     margin: auto;
 }
 
-p {
-    text-align: center;
-}
-
 .g-recaptcha {
     margin: 10px;
     display: inline-block;
 }
+
+input#email {
+    border-width: 0.25px;
+    border-color: #eeeeee;
+}
+
+input#name {
+    border-width: 0.25px;
+    border-color: #eeeeee;
+}
+
+input {
+    border-width: 0.25px;
+    border-color: #eeeeee;
+}
+
+.nav {
+    border: 1px solid white;
+    width: 81.5%;
+}
+
+.egg {
+    border: 1px solid red;
+    float: right;
+}
+
+/*
+.collapse {
+    border: 1px solid black;
+}
+*/
 
 
 
