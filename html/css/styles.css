@@ -121,17 +121,20 @@ input {
 
 .mtn_div {
     border: 1px dashed red;
-    float: right;
 }
 
-.navbar-nav li a .mtn {
+.mtn_div a {
+    padding-right: 0px;
+}
+
+.navbar-nav li a:nth-child(4) {
     padding: 0px;
     text-align: center;
 }
 
-.mtn img {
+.mtn {
     border: 1px solid red;
-    height: 40%;
+    height: 40px;
     width: auto;
 }
 
@@ -143,6 +146,22 @@ input {
 
 .btn {
     background-color: #41b5f3;
+}
+
+.img-responsive {
+    margin: auto;
+}
+
+.gif {
+    display: inline-block;
+    margin: 15px;
+    height: 102px;
+    width: auto;
+    text-align: center;
+}
+
+.bellman {
+    vertical-align: center;
 }
 
 
