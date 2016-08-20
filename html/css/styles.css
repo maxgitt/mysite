@@ -164,6 +164,22 @@ input {
     vertical-align: center;
 }
 
+.anon {
+    height: 160px;
+    width: auto;
+    display: inline;
+}
+
+.four {
+    height: auto;
+    width: 58%;
+}
+
+.fsm {
+    width: 80%;
+    height: auto;
+}
+
 
 
 
