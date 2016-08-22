@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="My Site" content="">
+    <meta name="Max Gittelman" content="">
+
+    <title>Max Gittelman</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Import Templates -->
+    <link rel="import" href="templates/header.html" id="header-template">
+    <link rel="import" href="templates/footer.html" id="footer-template">
+</head>
+
+<body class="kili-body">
+
+    <!-- Add Imports to DOM -->
+    <script>
+        // Add Header
+        var header_template = document.getElementById('header-template').import;
+        var header = header_template.getElementById('header');
+        document.body.appendChild(header.cloneNode(true));
+        // Add Footer
+        var footer_template = document.getElementById('footer-template').import;
+        var footer = footer_template.getElementById('footer');
+        document.body.appendChild(footer.cloneNode(true));
+    </script>
+
+    <!-- Container -->
+    <div class="kili-container">
+        <img src="images/kili.jpg">
+        <div class="kili-words"><p>Time of Summit 6:15 AM,  8th of August 2016.<br><br>My brother Zach (left) and I are standing at the Roof of Africa!<br>This is Uhuru or "Freedom" Peak where we completed one of the Seven Summits.</p></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
