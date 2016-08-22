@@ -2,10 +2,6 @@ function success_callback() {
   alert("Your email has been sent!");
 }
 
-function fail_callback() {
-  alert("Sorry, your email could not be sent!");
-}
-
 function send_email(name, email) {
 
   // Send email
@@ -14,7 +10,7 @@ function send_email(name, email) {
       "email": email,
       "name": name
   };
-  var posting = $.post(url, data, success_callback(), fail_callback());
+  var posting = $.post(url, data, success_callback());
   
   /*
   // Check email was sent
@@ -27,7 +23,7 @@ function send_email(name, email) {
 }
 
 function validate_server_recaptcha() {
-  alert("Function called");
+  console.log("Function called");
   var status = null;
   // Get Validation
   url = "https://www.google.com/recaptcha/api/siteverify";
@@ -52,7 +48,7 @@ function validate_server_recaptcha() {
 // Attach a submit handler to the form
 $( "#recaptcha-form" ).submit(function( event ) {
 
-  alert("form submitted");
+  // alert("form submitted");
   // Stop form from submitting normally
   event.preventDefault();
  
@@ -60,8 +56,8 @@ $( "#recaptcha-form" ).submit(function( event ) {
   var name = document.getElementById('name');
   var email = document.getElementById('email');
   if (name.value && email.value) {
-    alert("Name: " + name.value);
-    alert("Email: " + email.value);
+    console.log("Name: " + name.value);
+    console.log("Email: " + email.value);
     
     // Check recaptcha was completed
     if (document.getElementById('g-recaptcha-response').value) {
