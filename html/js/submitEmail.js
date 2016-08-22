@@ -1,5 +1,7 @@
-function success_callback() {
+function success_email_sent() {
+
   alert("Your email has been sent!");
+
 }
 
 function send_email(name, email) {
@@ -10,38 +12,45 @@ function send_email(name, email) {
       "email": email,
       "name": name
   };
-  var posting = $.post(url, data, success_callback());
-  
-  /*
-  // Check email was sent
-  posting.done(function(){
-      alert("Your email has been sent!");
-  })
-  posting.fail(function(){
-      alert("Sorry the email could not be sent.");
-  })*/
+  $.post(url, data, success_email_sent());
+
+}
+
+function success_google_validated(data) {
+  console.log(data);
+  console.log(JSON.parse(data));
+  status = JSON.parse(data).status;
+  if (status == "successful") {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    send_email(name, email);
+  }
+  else {
+    alert("Google did not verify you as human.");
+  }
+
 }
 
 function validate_server_recaptcha() {
-  console.log("Function called");
-  var status = null;
+
+  console.log("Validate function called");
   // Get Validation
-  url = "https://www.google.com/recaptcha/api/siteverify";
-  data = {
-      "secret": email,
+  //url = "https://www.google.com/recaptcha/api/siteverify";
+  request_data = {
+      "secret": "6LdGfyUTAAAAAIZDpThAR7kfAFRtoslKTeanvG7m",
       "response": document.getElementById("g-recaptcha-response")
   };
-  var posting = $.post(url, data);
-  
-  // Check google verified
-  posting.done(function(data){
-      status = JSON.parse(data).status;
-      alert('Status: ' + status);
+  //$.post(url, data, success_google_validated());
+
+  $.ajax({
+    url : 'https://www.google.com/recaptcha/api/siteverify',
+    type: 'POST',
+    data: request_data,
+    dataType: 'json',
+    success: success_google_validated(),
+    error: fail_google_validated()
   })
-  posting.fail(function(){
-      alert("Could not connect with google.");
-  })
-  return status;
+
 }
 
 
@@ -53,23 +62,17 @@ $( "#recaptcha-form" ).submit(function( event ) {
   event.preventDefault();
  
   // Validate fields
-  var name = document.getElementById('name');
-  var email = document.getElementById('email');
-  if (name.value && email.value) {
-    console.log("Name: " + name.value);
-    console.log("Email: " + email.value);
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var recaptcha_checked = document.getElementById('g-recaptcha-response').value;
+
+  if (name && email) {
+    console.log("Name: " + name);
+    console.log("Email: " + email);
     
     // Check recaptcha was completed
-    if (document.getElementById('g-recaptcha-response').value) {
-        // status = validate_server_recaptcha();
-        status = "successful";
-        // Check recaptcha was successful
-        if (status == "successful") {
-          send_email(name, email);
-        }
-        else {
-          alert("Google did not verify you as human.");
-        }
+    if (recaptcha_checked) {
+        validate_server_recaptcha();
     }
     else {
         alert("Please verify you are human.");

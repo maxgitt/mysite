@@ -47,16 +47,19 @@
 
     <p class="contact">Hi! Reach out to me if you'd like to find out more.</p>
 
-    <form action="MAILTO:maxgitt@umich.edu" method="post" enctype="text/plain">
+    <!--
+    <form action="" id="recaptcha-form">
         Name<br><input type="text" id="name"><br><br>
         E-mail<br><input type="text" id="email"><br><br>
-        <textarea name="body" cols=60 rows=15></textarea><br><input name=ccme type=checkbox checked> Send me a copy of this message<p> 
-    </form>
-
-    <form action="" id="recaptcha-form">
         <div class="g-recaptcha" data-sitekey="6LdGfyUTAAAAAIZDpThAR7kfAFRtoslKTeanvG7m"></div>
         <br>
         <input type="submit" value="Submit">
+    </form> -->
+
+    <form method=POST action="/cgi-bin/htmail/maxgitt@umich.edu">
+        Name<br><input type="text" id="name"><br><br>
+        E-mail<br><input type="text" id="email"><br><br>
+        <input type=submit value="Submit"><p>
     </form>
 
     <script src="js/submitEmail.js"></script>
