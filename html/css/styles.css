@@ -8,10 +8,10 @@ body {
 footer {
     /*margin: 50px 0;*/
     position:fixed;
-    height: 25px;
+    height: 35px;
     background-color: #41b5f3;
     bottom:0px; left:0px; right:0px;
-    padding-top: 3px;
+    padding-top: 8px;
     color: white;
     z-index: 4;
     border-top: 1px solid black;
@@ -26,60 +26,112 @@ footer a:hover {
     color: gray;
 }
 
-.pic {
+.mich {
+    font-family: Arial;
+    font-weight: 800;
+}
+
+.divider {
+    width: 40%;
+}
+
+p {
+    font-family: Arial;
+    font-size: 120%;
+}
+
+.footer-text {
+    font-family: Arial;
+    font-size: 95%;
+}
+
+.my-pic {
 	width: 240px;
 	height: auto;
 	margin-top: 50px;
+    border: 10px solid black;
 }
 
 .navbar {
 	background-color: #41b5f3;
 }
 
+@media (min-width: 768px) {
+    .navbar-brand {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        margin:0 auto;
+    }    
+
+    .navbar-brand a {
+        padding-left: 35px;
+    }
+}
+
+
 .navbar-inverse .navbar-nav li a {
 	color: white;
     text-align: center;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-inverse .navbar-brand a {
     color: white;
+    text-align: center;
+}
+
+.navbar-inverse .navbar-brand a:hover {
+    color: #f0f341;
+    text-decoration: none;
 }
 
 .navbar-inverse .navbar-nav li:hover {
-    background-color: blue;
+    background-color: #415cf3;
     border-radius: 4px;
 }
 
 .navbar-inverse .navbar-nav li a:hover {
-    color: yellow;
+    color: #f0f341;
 }
 
-.navbar-inverse .navbar-brand:hover {
-    color: yellow;
-    background-color: blue;
-    border-radius: 4px;
+.dropdown-menu {
+    background-color: #41b5f3;
+}
+
+.dropdown-menu a:hover {
+    color: #41b5f3;
 }
 
 .about {
     width: 70%;
     margin: auto;
     max-width: 700px;
-    border: 1px solid green;
-}
-
-.about_header {
-    text-align: center;
 }
 
 .about_pic {
-    margin: auto;
+    margin: 0px auto 30px auto;
     text-align: center;
-    border: 1px solid red;
 }
 
 .about_pic img {
-    width: 20%;
+    width: 25%;
+    min-width: 250px;
+    max-width: 400px;
     height: auto;
+    border: 10px solid black;
+}
+
+@media (max-width: 550px) {
+    .about p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 551px) {
+    .about p {
+        font-size: 15px;
+    }
 }
 
 .contact {
@@ -114,10 +166,6 @@ input {
     border-color: #eeeeee;
 }
 
-.nav {
-    border: 1px solid white;
-    width: 81.5%;
-}
 
 .mtn_div {
     border: 1px dashed red;
@@ -144,12 +192,10 @@ input {
 }
 */
 
-.btn {
-    background-color: #41b5f3;
-}
-
 .img-responsive {
     margin: auto;
+    height: 250px;
+    width: auto;
 }
 
 .gif {

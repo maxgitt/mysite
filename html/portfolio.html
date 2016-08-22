@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Portfolio
-                    <small>{2}</small>
+                    <small>ML and AI</small>
                 </h1>
             </div>
         </div>
@@ -55,13 +55,12 @@
         <!-- Project One -->
         <div class="row">
             <div class="col-md-7">
-                <img class="img-responsive" src="images/tsp.gif" alt="">
+                <img class="img-responsive" src="images/cnn.png" alt="">
             </div>
             <div class="col-md-5">
-                <h3>The Traveling Salesman</h3>
-                <h4>A* Search Algorithm</h4>
-                <p>The classic traveling salesman problem is an NP-hard problem that requires(?) the shortest route to connect a set of points. I used the A* search algorithm because it is an admissible heuristic. Several heuristics were explored to help efficiently determine the optimal path. For estimating the cost of the remaining (sparse graph) path, Kruskal’s algorithm was found most useful. A mininum spanning tree was created and the heuristic allowed for pruning of excessive length paths.</p>
-                <a class="btn btn-primary" href="#">Request Access<span class="glyphicon glyphicon-chevron-right"></span></a>
+                <h3>Fingerprint Verification</h3>
+                <h4>CNN</h4>
+                <p>Convolutional Neural Networks recent success in image recognition lead our team to believe we could effectively implement a network for fingerprint verification. Using two images as input, we applied convolutions with max pooling and activation functions intermittently. A fully connected layer was then created and a softmax function is applied to its complex features to place </p>
             </div>
         </div>
         <!-- /.row -->
@@ -69,6 +68,84 @@
         <hr>
 
         <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-responsive" src="images/movie.jpg" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Predicting Movie Ratings</h3>
+                <h4>Sentiment Analysis</h4>
+                <p>The intent of this natural language processing problem was to predict the ratings of a movie-goer based on his/her review. In order to yield the most accurate results, I explored combinations of various pre-processing techniques on a training data set. Approaches include lemmatizing, stemming, removing stopwords, observing word frequency and inverse document frequency. With the feature matrix engineered, I trained models using logistic regression, a support vector machine of a linear kernel, and a naive bayes and used the most accurate models on a test set.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-responsive gif" src="images/mona.gif" alt="">
+                <img class="img-responsive gif" src="images/messi.gif" alt="">
+                <img class="img-responsive gif" src="images/darwin.gif" alt="">
+                <img class="img-responsive gif" src="images/mickey.gif" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Mona Lisa</h3>
+                <h4>Genetic Algorithm</h4>
+                <p>Genetic Algorithms are famous for their ability to evolve a population of objects into a highly fit version of themselves. This project focused on producing images that highly resembled famous drawings. By mutating a population of images consisting of polygons and selecting for the best fit children, I was able to evolve the population to a desired target. </p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-responsive" src="images/yard.png" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Shipping Yard</h3>
+                <h4>Nonlinear Search Planner</h4>
+                <p>Plan out a strategy for moving containers from a ship to specific locations in a shipping yard. Because a linear planner is inefficient in determining a solution for (this type of problem category), I used a nonlinear partial order planner. Initially I began with empty partial plans. I then continuously added causal links, which connect states, until a partial plan has met all conditions and is considered complete.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-responsive bellman" src="images/bellman.png" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>An Unpredictable World</h3>
+                <h4>Markov Decision Process</h4>
+                <p>Direct an agent to a goal state in an unpredictable environment. Due to the environment’s indeterminateness, an optimal policy was determined for the agent via value iteration. The expected utility for each action at any given position is calculated. The action with the greatest expected utility is used as the optimal policy for that position and is used to update the policy for that position (along with value at position). Policies were are updated until convergence. Monte Carlo simulations were run to verify the model’s acceptability.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Six -->
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-responsive" src="images/tsp.gif" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>The Traveling Salesman</h3>
+                <h4>A* Search Algorithm</h4>
+                <p>The classic traveling salesman problem is an NP-hard problem that requires(?) the shortest route to connect a set of points. I used the A* search algorithm because it is an admissible heuristic. Several heuristics were explored to help efficiently determine the optimal path. For estimating the cost of the remaining (sparse graph) path, Kruskal’s algorithm was found most useful. A mininum spanning tree was created and the heuristic allowed for pruning of excessive length paths.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Seven -->
         <div class="row">
             <div class="col-md-7">
                 <img class="img-responsive anon" src="images/anon1.png" alt="">
@@ -80,14 +157,13 @@
                 <h3>Anonymous Authors</h3>
                 <h4>Bayesian Inference</h4>
                 <p>Given a library of articles, I was able to attribute an author to anonymous works. To ignore the bias of the article content and focus on a writer’s patterns, I used stopword frequency as a measurement. Stop word frequency was a much better predictor of authorship over term frequency.</p>
-                <a class="btn btn-primary" href="#">Request Access<span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
         <!-- /.row -->
 
         <hr>
 
-        <!-- Project Three -->
+        <!-- Project Eight -->
         <div class="row">
             <div class="col-md-7">
                 <img class="img-responsive" src="images/logs.png" alt="">
@@ -96,14 +172,13 @@
                 <h3>Logging Database</h3>
                 <h4>Runtime & Storage Tradeoffs</h4>
                 <p>Utilizing combinations of data structures, I built an efficient log file database. Taking into account insertions, deletions, and look-up complexities for time and memory, I determined optimal data structures for accomplishing specific interactions with the database.</p>
-                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
         <!-- /.row -->
 
         <hr>
 
-        <!-- Project Four -->
+        <!-- Project Nine -->
         <div class="row">
             <div class="col-md-7 four">
                 <img class="img-responsive fsm" src="images/fsm.png" alt="">
@@ -112,14 +187,13 @@
                 <h3>Finite-state Machine</h3>
                 <h4>Assembly Level Programming</h4>
                 <p>A finite-state machine was implemented to carry out a computer's assembly instructions. I implemented procedure calls in an assembly language similar to ARM and designed an optimal finite-state machine. Instructions were fetched from memory, decoded and executed until the program reaches a halt.</p>
-                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
         <!-- /.row -->
 
         <hr>
 
-        <!-- Project Five -->
+        <!-- Project Ten -->
         <div class="row">
             <div class="col-md-7">
                 <img class="img-responsive" src="images/pipeline.png" alt="">
@@ -128,33 +202,11 @@
                 <h3>Pipelined Datapath</h3>
                 <h4>Parallel Instruction Clocking Scheme</h4>
                 <p>By implementing a pipelined datapath I reduced the execution time for data processing that a single cycle and cycle multicycle data path could not. The five stage pipeline was complete with data forwarding and branch prediction, to prevent data hazards and control flow hazards. By allowing for the register files and memory writes to be present for the entire cycle, forwarding can be used to update instruction dependencies.</p>
-                <a class="btn btn-primary" href="#">Request Access <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
-        <!-- /.row -->
+
 
         <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="portfolio_one.html">&laquo;</a>
-                    </li>
-                    <li>
-                        <a href="portfolio_one.html">1</a>
-                    </li>
-                    <li class="active">
-                        <a href="">2</a>
-                    </li>
-                    <li>
-                        <a href="">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
 
     </div>
     <!-- /.container -->
