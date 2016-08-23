@@ -209,16 +209,30 @@ input {
     width: auto;
 }
 
-/*
-.collapse {
-    border: 1px solid black;
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Arial;
 }
-*/
 
 .img-responsive {
     margin: auto;
     height: 250px;
     width: auto;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.portfolio-container .col-md-7 {
+    text-align: center;
+}
+
+
+.review-one {
+    height: 100px;
+    width: auto;
+    border: 1px dotted black;
+}
+
+.review-two {
     margin-top: 25px;
 }
 
@@ -230,25 +244,27 @@ input {
     text-align: center;
 }
 
+.bellman-container {
+    text-align: center;
+}
+
 .bellman {
     vertical-align: center;
-    margin-bottom: 
+    width: 80%;
+    height: auto;
+}
+
+.tsp img {
+    margin-top: 0px;
+    height: 250px;
+    width: auto;
+    z-index: 1;
 }
 
 .anon {
     height: 160px;
     width: auto;
     display: inline;
-}
-
-.four {
-    height: auto;
-    width: 58%;
-}
-
-.fsm {
-    width: 80%;
-    height: auto;
 }
 
 .kili-body {
