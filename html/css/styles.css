@@ -35,7 +35,7 @@ footer a:hover {
     width: 40%;
 }
 
-p {
+.index-text p {
     font-family: Arial;
     font-size: 120%;
 }
@@ -138,8 +138,12 @@ p {
     }
 }
 
-.contact {
+.contact-top-text {
     text-align: center;
+}
+
+.contact-top-text p {
+    font-size: 20px;
 }
 
 form {
@@ -153,6 +157,10 @@ form {
 .g-recaptcha {
     margin: 10px;
     display: inline-block;
+}
+
+.recaptcha-form .btn {
+    background-color: #41b5f3;
 }
 
 input#email {
@@ -232,6 +240,10 @@ input {
     height: auto;
 }
 
+.kili-body {
+    background-color: #8daadc;
+}
+
 .kili-container {
     position: fixed;
     top: 0;
@@ -240,65 +252,54 @@ input {
     right: 0;
     max-width: 100%;
     max-height: 100%;
-    margin: 53px auto 35px auto;
-    text-align: center;
-}
-
-.kili-body {
-    background-color: #8daadc;
+    margin: 52px auto 35px auto;
 }
 
 .kili-container img {
-    display: inline-block;
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
 }
 
 .kili-words {
-    display: inline-block;
     color: white;
+    position: absolute;
+    margin: 0px auto 0px auto;
+    min-height: 8em;
+    width: 60%;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .kili-words p {
     font-family: Arial;
+    font-size: 14px;
 }
 
-@media (min-width: 768px) {
-
-    .kili-container img {
-        max-height: 100%;
-        max-width: 85%;
-    }
-
-    .kili-words {
-        width: 12%;
-        height: 100%;
-        margin: 5% 1.5% 0px 1.5%;
-        float: left;
-    }
-
-    .kili-words p {
-        font-size: 16px;
-    }
-
+.form-control {
+    margin: auto;
+    width: 30%;
 }
 
-@media (max-width: 767px) {
-
-    .kili-container img {
-        max-height: 90%;
-        max-width: 100%;
-    }
-
-    .kili-words {
-        width: 60%;
-        height: 100%;
-    }
-
-    .kili-words p {
-        font-size: 12px;
-    }
-
+.success-container {
+    text-align: center;
 }
 
+.success-container h1 {
+    color: #00274c;
+}
+
+.success-pic {
+    margin-top: 20px;
+    width: 75%;
+    height: auto;
+}
 
 
 
