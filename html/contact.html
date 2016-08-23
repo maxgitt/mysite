@@ -22,10 +22,6 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
-    <!-- Import Templates -->
-    <link rel="import" href="templates/header.html" id="header-template">
-    <link rel="import" href="templates/footer.html" id="footer-template">
-
     <!-- Load Recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -33,17 +29,7 @@
 
 <body>
 
-    <!-- Add Imports to DOM -->
-    <script>
-        // Add Header
-        var header_template = document.getElementById('header-template').import;
-        var header = header_template.getElementById('header');
-        document.body.appendChild(header.cloneNode(true));
-        // Add Footer
-        var footer_template = document.getElementById('footer-template').import;
-        var footer = footer_template.getElementById('footer');
-        document.body.appendChild(footer.cloneNode(true));
-    </script>
+    <div id="header"></div>
 
     <p class="contact-top-text">Hi! Reach out to me if you'd like to find out more.</p>
 
@@ -78,10 +64,17 @@
     </form>
     -->
 
+    <div id="footer"></div>
+
     <script src="js/submitEmail.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $("#header").load("templates/header.html #header-template");
+        $("#footer").load("templates/footer.html #footer-template");
+    </script>
 
 </body>
 
