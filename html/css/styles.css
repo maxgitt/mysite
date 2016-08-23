@@ -140,10 +140,15 @@ footer a:hover {
 
 .contact-top-text {
     text-align: center;
+    margin-top: 100px;
 }
 
 .contact-top-text p {
     font-size: 20px;
+}
+
+.submit-btn {
+    background-color: #41b5f3;
 }
 
 form {

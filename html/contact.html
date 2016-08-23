@@ -47,31 +47,21 @@
 
     <p class="contact-top-text">Hi! Reach out to me if you'd like to find out more.</p>
 
-    <!--
-    <form action="" id="recaptcha-form">
-        Name<br><input type="text" id="name"><br><br>
-        E-mail<br><input type="text" id="email"><br><br>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-    -->
-
     <form method=POST action="http://www.umich.edu/cgi-bin/htmail/maxgitt@umich.edu">
-        <input type="text" class="form-control" placeholder="Full Name"><br>
+        <input type="text" class="form-control" name="Full Name: " placeholder="Full Name"><br>
         <input type="text" class="form-control" name="from" placeholder="Email"><br>
-        <textarea class="form-control" placeholder="Comments" rows="4"></textarea><p><br>
-        <input name=ccme type=checkbox checked>Send me a copy of this message<p>
+        <textarea class="form-control" name="Body: " placeholder="Body" rows="4"></textarea><p><br>
+        <div class="checkbox">
+            <label>
+                <input class="checkbox" name=ccme type=checkbox unchecked>Send me a copy of this message
+            </label>
+        </div>
 
         <input name="successURL" type="hidden" value="http://www.umich.edu/~maxgitt/success.html">
         <div class="g-recaptcha" data-sitekey="6LdGfyUTAAAAAIZDpThAR7kfAFRtoslKTeanvG7m"></div>
-        <p><input class="btn btn-info" type=submit value="Submit"></p>
+        <p><input class="btn btn-info submit-btn" type=submit value="Submit"></p>
 
-    <!-- The following sets the subject of the message.  In this case, it 
-     sets it to something easily identifiable...  -->
         <input type="hidden" name="subject" value="Email from my Website">
-
-    <!-- Don't put any form elements after this next line - they won't be
-     handled properly -->
     </form>
 
     <!--
