@@ -19,11 +19,23 @@
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
     <div id="header"></div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("templates/header.html #header-template");
+        $("#footer").load("templates/footer.html #footer-template");
+    </script>
+
     <div class="about_pic">
         <img src="images/fam.jpg">
     </div>
@@ -32,18 +44,6 @@
         <h4 class="about_header">About Me</h4>
         <p>My name is Max Gittelman. I am originally from Miami, Florida where I grew up in a family with 4 siblings. My family is most important to me. We value education and our guiding principle is to ask a good question every day. The constant questioning of ideas is what lead me into the STEM field.<br><br>I am currently a student at the University of Michigan, Ann Arbor pursuing a degree in Computer Science Engineering. I have a wide range of interests from Web Development to Human Computer Interactions to Machine Learning. The blunt of my coursework has been in subjects that emphasize algorithms, logic, and concepts in mathematics.</p>
     </div>
-    <div id="footer"></div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $("#header").load("templates/header.html #header-template");
-        $("#footer").load("templates/footer.html #footer-template");
-    </script>
 
 </body>
 

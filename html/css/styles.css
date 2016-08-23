@@ -151,6 +151,12 @@ footer a:hover {
     background-color: #41b5f3;
 }
 
+.submit-btn:hover {
+    background-color: #415cf3;
+    color: #f0f341;
+    border-color: #415cf3;
+}
+
 form {
     text-align: center;
 }

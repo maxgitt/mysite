@@ -19,11 +19,22 @@
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
     <div id="header"></div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("templates/header.html #header-template");
+        $("#footer").load("templates/footer.html #footer-template");
+    </script>
 
     <!-- Page Content -->
     <div class="container">
@@ -196,19 +207,6 @@
 
     </div>
     <!-- /.container -->
-
-    <div id="footer"></div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $("#header").load("templates/header.html #header-template");
-        $("#footer").load("templates/footer.html #footer-template");
-    </script>
 
 </body>
 

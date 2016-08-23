@@ -22,14 +22,21 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
     <!-- Load Recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 </head>
 
 <body>
 
     <div id="header"></div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("templates/header.html #header-template");
+        $("#footer").load("templates/footer.html #footer-template");
+    </script>
 
     <p class="contact-top-text">Hi! Reach out to me if you'd like to find out more.</p>
 
@@ -64,17 +71,7 @@
     </form>
     -->
 
-    <div id="footer"></div>
-
     <script src="js/submitEmail.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $("#header").load("templates/header.html #header-template");
-        $("#footer").load("templates/footer.html #footer-template");
-    </script>
 
 </body>
 
