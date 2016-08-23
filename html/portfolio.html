@@ -19,25 +19,11 @@
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
 
-    <!-- Import Templates -->
-    <link rel="import" href="templates/header.html" id="header-template">
-    <link rel="import" href="templates/footer.html" id="footer-template">
-
 </head>
 
 <body>
 
-    <!-- Add Imports to DOM -->
-    <script>
-        // Add Header
-        var header_template = document.getElementById('header-template').import;
-        var header = header_template.getElementById('header');
-        document.body.appendChild(header.cloneNode(true));
-        // Add Footer
-        var footer_template = document.getElementById('footer-template').import;
-        var footer = footer_template.getElementById('footer');
-        document.body.appendChild(footer.cloneNode(true));
-    </script>
+    <div id="header"></div>
 
     <!-- Page Content -->
     <div class="container">
@@ -211,11 +197,18 @@
     </div>
     <!-- /.container -->
 
+    <div id="footer"></div>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $("#header").load("templates/header.html #header-template");
+        $("#footer").load("templates/footer.html #footer-template");
+    </script>
 
 </body>
 

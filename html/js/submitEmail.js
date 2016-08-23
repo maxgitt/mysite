@@ -47,9 +47,10 @@ function validate_server_recaptcha() {
     type: 'POST',
     data: request_data,
     dataType: 'json',
-    success: success_google_validated(),
-    error: fail_google_validated()
-  })
+    success: function(json) {
+      console.log(json);
+    }
+  });
 
 }
 
