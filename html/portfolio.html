@@ -9,6 +9,7 @@
     <meta name="Max Gittelman" content="">
 
     <title>Max Gittelman</title>
+    <link rel="shortcut icon" href="images/index.ico"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +58,7 @@
             <div class="col-md-5">
                 <h3>Fingerprint Verification</h3>
                 <h4>CNN</h4>
-                <p>Convolutional Neural Networks recent success in image recognition lead our team to believe we could effectively implement a network for fingerprint verification. Using two images as input, we applied convolutions with max pooling and activation functions intermittently. A fully connected layer was then created and a softmax function is applied to its complex features to place </p>
+                <p>Convolutional Neural Network's recent success in image recognition led our team to believe we could effectively implement a network for fingerprint verification. Using two images as input, we applied convolutions with max pooling and activation functions intermittently. We then created a fully connected layer and applied a softmax function to reduce the complex features into a class. The class label was verified or rejected to train the network effectively.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -73,7 +74,7 @@
             <div class="col-md-5">
                 <h3>Predicting Movie Ratings</h3>
                 <h4>Sentiment Analysis</h4>
-                <p>The intent of this natural language processing problem was to predict the ratings of a movie-goer based on his/her review. In order to yield the most accurate results, I explored combinations of various pre-processing techniques on a training data set. Approaches include lemmatizing, stemming, removing stopwords, observing word frequency and inverse document frequency. With the feature matrix engineered, I trained models using logistic regression, a support vector machine of a linear kernel, and a naive bayes and used the most accurate models on a test set.</p>
+                <p>The intent of this natural language processing problem is to predict the ratings of a movie-goer based on his/her review. In order to yield the most accurate results, I explored combinations of various pre-processing techniques on a training data set. Approaches include lemmatizing, stemming, removing stopwords, observing word frequency and comparing its accuracy to that of inverse document frequency. With the feature matrix engineered, I trained logistic regression classifiers, support vector machines of a linear kernel, and naive bayes classifiers. The model with highest predictive accuracy on the validation set was used to label the test set.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -91,7 +92,7 @@
             <div class="col-md-5">
                 <h3>Mona Lisa</h3>
                 <h4>Genetic Algorithm</h4>
-                <p>Genetic Algorithms are famous for their ability to evolve a population of objects into a highly fit version of themselves. This project focused on producing images that highly resembled famous drawings. By mutating a population of images consisting of polygons and selecting for the best fit children, I was able to evolve the population to a desired target. </p>
+                <p>Genetic Algorithms are famous for their ability to evolve a population of objects into a highly fit version of themselves. This project focused on producing images that highly resembled famous drawings. By selecting, crossing, and mutating best fit images from a population of polygons, I was able to evolve the population to a desired target. </p>
             </div>
         </div>
         <!-- /.row -->
@@ -106,7 +107,7 @@
             <div class="col-md-5 ship-text">
                 <h3>Shipping Yard</h3>
                 <h4>Nonlinear Search Planner</h4>
-                <p>Plan out a strategy for moving containers from a ship to specific locations in a shipping yard. Because a linear planner is inefficient in determining a solution for (this type of problem category), I used a nonlinear partial order planner. Initially I began with empty partial plans. I then continuously added causal links, which connect states, until a partial plan has met all conditions and is considered complete.</p>
+                <p>Here I planned out a strategy for moving containers from a ship to specific locations in a shipping yard. Due to redundancy in planning, a linear planner is inefficient in determining an optimal solution. I therefore opted to use a nonlinear partial order planner. Initially I began with empty partial plans and then by continuously adding causal links to connect states of the environment, I was able to piece together a complex partial plan. Finally, when all goal conditions have been met the partial plan can be sorted to produce a complete plan.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -121,7 +122,7 @@
             <div class="col-md-5">
                 <h3>An Unpredictable World</h3>
                 <h4>Markov Decision Process</h4>
-                <p>Direct an agent to a goal state in an unpredictable environment. Due to the environment’s indeterminateness, an optimal policy was determined for the agent via value iteration. The expected utility for each action at any given position is calculated. The action with the greatest expected utility is used as the optimal policy for that position and is used to update the policy for that position (along with value at position). Policies were are updated until convergence. Monte Carlo simulations were run to verify the model’s acceptability.</p>
+                <p>I directed an agent to a goal state in an unpredictable environment. Due to the environment’s indeterminateness, an optimal policy for the agent was calculated via value iteration. The expected utility for each action at all positions is determined first. The action with the greatest expected utility is assumed to be the optimal action to take and is used to update the policy, utility gained, at that position. To optimize the map's policy for an agent, the process is repeated until convergence. Monte Carlo simulations were then run to field test and verify the model’s acceptability.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -136,7 +137,7 @@
             <div class="col-md-5">
                 <h3>The Traveling Salesman</h3>
                 <h4>A* Search Algorithm</h4>
-                <p>The classic traveling salesman problem is an NP-hard problem that requires(?) the shortest route to connect a set of points. I used the A* search algorithm because it is an admissible heuristic. Several heuristics were explored to help efficiently determine the optimal path. For estimating the cost of the remaining (sparse graph) path, Kruskal’s algorithm was found most useful. A mininum spanning tree was created and the heuristic allowed for pruning of excessive length paths.</p>
+                <p>The classic traveling salesman problem is an NP-hard problem that so far requires a heuristic to find the shortest route to connect a set of points. I used the A* search algorithm because it is admissible (does not overestimate path lengths) and complete (will always find a solution if one exists). Several functions were explored to help efficiently determine the optimal path and due to its sparsity, Kruskal's algorithm was found most useful in estimating the remaining path cost. The objective function produces a mininum spanning tree at each point in time and paths of excessive length are pruned out by the heuristic.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -154,7 +155,7 @@
             <div class="col-md-5">
                 <h3>Anonymous Authors</h3>
                 <h4>Bayesian Inference</h4>
-                <p>Given a library of articles, I was able to attribute an author to anonymous works. To ignore the bias of the article content and focus on a writer’s patterns, I used stopword frequency as a measurement. Stop word frequency was a much better predictor of authorship over term frequency.</p>
+                <p>Given a library of articles, I trained a bayesian network to attribute an author to an anonymous piece of work. To ignore the bias of the articles content and focus on a writer’s patterns, I used stop word frequency as a measurement over term frequency. Stop word frequency was proven to be a better predictor of authorship with an order of magnitude higher accuracy over that of term frequency.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -169,7 +170,7 @@
             <div class="col-md-5 log-text">
                 <h3>Logging Database</h3>
                 <h4>Runtime & Storage Tradeoffs</h4>
-                <p>Utilizing combinations of data structures, I built an efficient log file database. Taking into account insertions, deletions, and look-up complexities for time and memory, I determined optimal data structures for accomplishing specific interactions with the database.</p>
+                <p>Utilizing combinations of data structures, I built an efficient log file database. Taking into account insertions, deletions, and look-up complexities for time and memory, I determined optimal data structures to properly manage and sort the database as needed.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -184,7 +185,7 @@
             <div class="col-md-5 fsm-text">
                 <h3>Finite-state Machine</h3>
                 <h4>Assembly Level Programming</h4>
-                <p>A finite-state machine was implemented to carry out a computer's assembly instructions. I implemented procedure calls in an assembly language similar to ARM and designed an optimal finite-state machine. Instructions were fetched from memory, decoded and executed until the program reaches a halt.</p>
+                <p>A finite-state machine was implemented to carry out a computer's assembly instructions. I implemented procedure calls in an assembly language similar to ARM and designed an optimal finite-state machine. Instructions are fetched from memory, decoded and executed until the program reaches a halt.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -199,7 +200,7 @@
             <div class="col-md-5">
                 <h3>Pipelined Datapath</h3>
                 <h4>Parallel Instruction Clocking Scheme</h4>
-                <p>By implementing a pipelined datapath I reduced the execution time for data processing that a single cycle and cycle multicycle data path could not. The five stage pipeline was complete with data forwarding and branch prediction, to prevent data hazards and control flow hazards. By allowing for the register files and memory writes to be present for the entire cycle, forwarding can be used to update instruction dependencies.</p>
+                <p>By implementing a pipelined datapath I reduced the execution time for data processing that a single cycle and multicycle data path would require. To prevent data hazards and control flow hazards, the five stage pipeline was fitted with data forwarding methods and branch predictions. By allowing for the register files and memory writes to be present for the entire cycle, forwarding can be used to update instruction dependencies and prevent them from becoming hazards at all.</p>
             </div>
         </div>
 

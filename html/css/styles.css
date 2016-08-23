@@ -229,6 +229,9 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
 }
 
+.portfolio-container .row {
+    width: 100%;
+}
 
 .review-one {
     height: 100px;
@@ -332,6 +335,8 @@ h1, h2, h3, h4, h5, h6, p {
 .form-control {
     margin: auto;
     width: 30%;
+    max-width: 400px;
+    min-width: 300px;
 }
 
 .success-container {
